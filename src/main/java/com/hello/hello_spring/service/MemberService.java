@@ -22,10 +22,10 @@ public class MemberService {
 	 * 회원가입
 	 */
 	public Long join(Member member) throws SQLException {
-		
-		// Alt + Shift + M 으로 extract method로 변경
+
+			// Alt + Shift + M 으로 extract method로 변경
 		validateDuplicateMember(member);
-		
+
 		memberRepository.save(member);
 		return member.getId();
 	}
